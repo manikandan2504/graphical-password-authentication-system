@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Verify OTP</title>
+
+    <style>
+
+        body{
+            background:#121212;
+            color:white;
+            font-family:Arial;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+
+            height:100vh;
+            margin:0;
+        }
+
+        .box{
+
+            width:90%;
+            max-width:400px;
+
+            background:#1e1e1e;
+
+            padding:30px;
+
+            border-radius:10px;
+
+            text-align:center;
+
+            box-shadow:0px 0px 15px cyan;
+        }
+
+        input{
+
+            width:80%;
+
+            padding:10px;
+
+            border-radius:5px;
+
+            border:1px solid cyan;
+
+            background:#2a2a2a;
+
+            color:white;
+        }
+
+        button{
+
+            padding:10px 20px;
+
+            background:cyan;
+
+            border:none;
+
+            border-radius:5px;
+
+            cursor:pointer;
+
+            font-size:16px;
+        }
+
+        h3{
+            color:orange;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h2>OTP Verification</h2>
+
+    <form method="POST">
+
+        {% csrf_token %}
+
+        <input type="text"
+               name="otp"
+               placeholder="Enter OTP"
+               required>
+
+        <br><br>
+
+        <h3>{{ message }}</h3>
+
+        <button type="submit">Verify OTP</button>
+
+    </form>
+
+</div>
+
+</body>
+
+</html>

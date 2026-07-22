@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+
+    <style>
+
+        body{
+            background:#121212;
+            color:white;
+            font-family:Arial;
+
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            margin:0;
+        }
+
+        .box{
+            width:500px;
+            background:#1e1e1e;
+            padding:40px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0px 0px 15px cyan;
+        }
+
+        h1{
+            color:cyan;
+        }
+
+        h2{
+            color:white;
+        }
+
+        a{
+            text-decoration:none;
+            background:cyan;
+            color:black;
+            padding:10px 20px;
+            border-radius:5px;
+            transition:0.3s;
+            font-weight:bold;
+        }
+
+        a:hover{
+            transform:scale(1.05);
+            display:inline-block;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+    <h1>Login Successful ✅</h1>
+
+    <h2>Welcome {{ username }}</h2>
+
+    <br><br>
+
+    <a href="/logout/">Logout</a>
+
+</div>
+
+</body>
+
+</html>
